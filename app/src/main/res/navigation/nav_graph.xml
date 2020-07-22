@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/NotifyListFragment">
+
+    <fragment
+        android:id="@+id/NotifyListFragment"
+        android:name="com.sns.notifyapp.view.NotifyListFragment"
+        android:label="@string/notify_list_fragment_label"
+        tools:layout="@layout/fragment_notify_list">
+
+        <action
+            android:id="@+id/action_NotifyListFragment_to_NotifyDetailsFragment"
+            app:destination="@id/NotifyDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NotifyDetailsFragment"
+        android:name="com.sns.notifyapp.view.NotifyDetailsFragment"
+        android:label="@string/notify_details_fragment_label"
+        tools:layout="@layout/fragment_notify_details">
+
+        <action
+            android:id="@+id/action_NotifyDetailsFragment_to_NotifyListFragment"
+            app:destination="@id/NotifyListFragment" />
+    </fragment>
+</navigation>
