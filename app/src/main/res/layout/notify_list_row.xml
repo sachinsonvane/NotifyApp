@@ -9,21 +9,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:paddingBottom="10dp"
+        android:background="@android:color/transparent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="@{notifyData.title}" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@color/transparent_20_color"
+                android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:layout_marginTop="10dp"
-            android:text="@{notifyData.desc}" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@{notifyData.title}" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="10dp"
+                    android:text="@{notifyData.desc}" />
+
+            </LinearLayout>
 
     </LinearLayout>
 </layout>

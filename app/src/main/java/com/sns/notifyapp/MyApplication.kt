@@ -26,7 +26,7 @@ class MyApplication : Application(), HasAndroidInjector, LifecycleObserver {
 
     private var mAlarmMgr: AlarmManager? = null
     private lateinit var mAlarmIntent: PendingIntent
-    val INTERVAL_TIME:Long = 3000
+    val INTERVAL_TIME:Long = 60000
 
     var mSharedPreferences: SharedPreferences? = null
     private val mSharedPrefFile = "notifyapp_sharedpreference"
