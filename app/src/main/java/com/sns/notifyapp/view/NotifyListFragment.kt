@@ -6,24 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
 import com.sns.notifyapp.R
-import com.sns.notifyapp.utils.Utilites
-import com.sns.notifyapp.view.adapters.ItemAdapter
 import com.sns.notifyapp.viewmodel.NotifyListViewModel
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
+import com.sns.notifyapp.utils.Utilites
+import com.sns.notifyapp.view.adapters.NotifyListAdapter
 
 class NotifyListFragment : Fragment() {
 
 
     override fun onAttach(context: Context) {
-        AndroidSupportInjection.inject(this)
+        AndroidSupportInjection.inject(this@NotifyListFragment)
         super.onAttach(context)
     }
 
@@ -35,7 +33,7 @@ class NotifyListFragment : Fragment() {
         itemRecyclerView.apply {
             layoutManager = LinearLayoutManager(activity?.baseContext)
             addItemDecoration(DividerItemDecoration(activity?.baseContext, DividerItemDecoration.VERTICAL))
-            adapter = ItemAdapter(Utilites.getNotifyListArr())
+            adapter = NotifyListAdapter(Utilites.getNotifyListArr())
         }
 
         return root

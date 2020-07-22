@@ -53,8 +53,8 @@ class NotifyReceiver : BroadcastReceiver() {
 
         val notificationBuilder = NotificationCompat.Builder(mContext, channelId)
             .setSmallIcon(R.mipmap.ic_launcher)
-            .setContentTitle("Title: API LEVEL " + Build.VERSION.SDK_INT)
-            .setContentText("UUID: " + UUID.randomUUID())
+            .setContentTitle("NotifyApp")
+            .setContentText(""+UUID.randomUUID())
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
             .addAction(R.mipmap.ic_launcher, "Do Task", buttonPendingIntent)
@@ -62,7 +62,7 @@ class NotifyReceiver : BroadcastReceiver() {
         with(NotificationManagerCompat.from(mContext)) {
             notify(1, notificationBuilder.build())
         }
-
+        //UUID.randomUUID()
     }
 
     private fun createNotificationChannel(channelId: String) {

@@ -25,9 +25,9 @@ Submit the assignment by Thursday.
     fun getNotifyListArr():ArrayList<NotifyData>{
 
         var arr = arrayListOf<NotifyData>()
-        arr.add(NotifyData("A","a aaaaaaaaaa","gfdgfd",444444))
-        arr.add(NotifyData("B","bbbbbbbbbbbb","gdfsgfg",5555555))
-        arr.add(NotifyData("C","ccccccccccccc","fdgdfgfgdfg",455454445))
+        arr.add(NotifyData("A","Notify 1","Notify Description",444444))
+        arr.add(NotifyData("B","Notify 2","Notify Description",5555555))
+        arr.add(NotifyData("C","Notify 3","Notify Description",455454445))
 
         return arr
     }

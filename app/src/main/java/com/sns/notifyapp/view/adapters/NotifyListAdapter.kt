@@ -1,7 +1,6 @@
 package com.sns.notifyapp.view.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -9,10 +8,10 @@ import com.sns.notifyapp.R
 import com.sns.notifyapp.databinding.NotifyListRowBinding
 import com.sns.notifyapp.model.NotifyData
 
-class ItemAdapter(private val itmeListArr:ArrayList<NotifyData>) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class NotifyListAdapter(private val itmeListArr:ArrayList<NotifyData>) : RecyclerView.Adapter<NotifyListAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val bindingView:NotifyListRowBinding) : RecyclerView.ViewHolder(bindingView.root) {
-        lateinit var vvBinding:NotifyListRowBinding
+        var vvBinding:NotifyListRowBinding
         init {
             this.vvBinding = bindingView
         }
