@@ -14,4 +14,5 @@ class NotifyListViewModel @Inject constructor(private val repository: DataReposi
     val text: LiveData<String> = _text
 
 
+
 }

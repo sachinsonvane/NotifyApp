@@ -5,6 +5,7 @@ import android.app.Application
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
@@ -27,6 +28,9 @@ class MyApplication : Application(), HasAndroidInjector, LifecycleObserver {
     private lateinit var mAlarmIntent: PendingIntent
     val INTERVAL_TIME:Long = 3000
 
+    var mSharedPreferences: SharedPreferences? = null
+    private val mSharedPrefFile = "notifyapp_sharedpreference"
+
     companion object{
         var mInstance:MyApplication? = null;
     }
@@ -37,6 +41,7 @@ class MyApplication : Application(), HasAndroidInjector, LifecycleObserver {
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         DaggerAppComponent.create().inject(this)
 
+        mSharedPreferences = this.getSharedPreferences(mSharedPrefFile, Context.MODE_PRIVATE)
         initializeAlaram();
     }
 
