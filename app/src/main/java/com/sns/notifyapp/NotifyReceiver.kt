@@ -55,6 +55,8 @@ class NotifyReceiver : BroadcastReceiver() {
             .setSmallIcon(R.mipmap.ic_launcher)
             .setContentTitle("NotifyApp")
             .setContentText(""+UUID.randomUUID())
+            .setShowWhen(true)
+            .setWhen(System.currentTimeMillis())
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
             .addAction(R.mipmap.ic_launcher, "Do Task", buttonPendingIntent)
