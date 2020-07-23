@@ -20,7 +20,7 @@ class RoomModule(mApplication: Application?) {
     }
 
     init {
-        mMyDatabase = Room.databaseBuilder(mApplication!!, MyDatabase::class.java, "notifydata_db")
+        mMyDatabase = Room.databaseBuilder(mApplication!!, MyDatabase::class.java, "notifydata-db")
                 .build()
     }
 }
